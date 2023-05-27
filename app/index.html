@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -39,6 +42,7 @@
               </a>
             </li>
           </ul>
+          <button class="btn header__btn" type="button">Заказать звонок</button>
           <div class="header__burger">
             <span></span>
           </div>
@@ -60,12 +64,12 @@
             </p>
           </div>
           <form class="form hero__form" action="#">
-            <h3 class="subtitle hero__form-title">
+            <h3 class="hero__form-title text">
               Производство пластиковых изделий от 10000 штук
             </h3>
             <input class="form__name" type="text" placeholder="Ваше имя" required>
-            <input class="form__phone" type="tel" name="tel" placeholder="(999)-999-99-99">
-            <input class="form_email email" type="email" placeholder="Ваш email (необязательно)">
+            <input class="form__phone" type="tel" name="tel" placeholder="(999)-999-99-99" required>
+            <input class="form__email email" type="email" placeholder="Ваш email (необязательно)">
             <button class="btn form__btn">Оставьте заявку</button>
           </form>
         </div>
@@ -77,23 +81,25 @@
         <h2 class="title about__title">О нас</h2>
         <div class="about__content">
           <div class="about__img-box">
-            <p>*some image*</p>
+            <img src="images/about.jpg" alt="Фото завода">
           </div>
-          <p class="about__text text">
-            Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi
-            optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est,
-            omnis dolor repellendus
-          </p>
-          <p class="about__text text">
-            Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi
-            optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est,
-            omnis dolor repellendus
-          </p>
-          <p class="about__text text">
-            Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi
-            optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est,
-            omnis dolor repellendus
-          </p>
+          <div class="about__wrapper">
+            <p class="about__text text">
+              Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi
+              optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est,
+              omnis dolor repellendus
+            </p>
+            <p class="about__text text">
+              Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi
+              optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est,
+              omnis dolor repellendus
+            </p>
+            <p class="about__text text">
+              Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi
+              optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est,
+              omnis dolor repellendus
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -106,8 +112,9 @@
         <div class="howto__wrapper">
           <div class="howto__group">
             <div class="howto__group-item">
+              <h3 class="howto__item-title">Если у вас есть пресс-форма:</h3>
               <ol class="howto__list">
-                <li class="howto__list-item">Связываемся, обсуждаем условия</li>
+                <li class="howto__list-item">Мы связываемся с вами, обсуждаем условия</li>
                 <li class="howto__list-item">Заключаем договор</li>
                 <li class="howto__list-item">Согласовываем эталонный образец и размер пробной партии</li>
                 <li class="howto__list-item">Доставляем вашу пресс-форму к нам в цех</li>
@@ -121,6 +128,7 @@
               </ol>
             </div>
             <div class="howto__group-item">
+              <h3 class="howto__item-title">Если у вас нет пресс-формы:</h3>
               <ol class="howto__list">
                 <li class="howto__list-item">Связываемся, обсуждаем условия</li>
                 <li class="howto__list-item">Заключаем договор</li>
@@ -137,8 +145,12 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="materials">
+    <section class="materials">
+      <div class="container">
+        <div class="materials__wrapper">
           <h2 class="materials__title title">Материалы, с которыми мы работаем</h2>
           <div class="materials__content">
             <ul class="materials__list">
@@ -163,23 +175,27 @@
       <div class="container">
         <h2 class="title portfolio__title">Наши изделия</h2>
         <div class="portfolio__slider slider">
-          <div class="slider__box"></div>
-          <ul class="slider__nav">
-            <li class="slider__item">
-              <h3 class="slider__item-title">Автомобильные бамперы</h3>
-              <p class="slider__item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A libero dolore
-                reprehenderit?</p>
-            </li>
-            <li class="slider__item">
-              <h3 class="slider__item-title">Детали холодильников</h3>
-              <p class="slider__item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A libero dolore
-                reprehenderit?</p>
-            </li>
-            <li class="slider__item">
-              <h3 class="slider__item-title">Пресс-форма — ледоходы</h3>
-              <p class="slider__item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A libero dolore
-                reprehenderit?</p>
-            </li>
+          <ul class="slider__box">
+            <div class="slider__img-box">
+              <img src="images/bamper-3.jpg" alt="Фото изделия">
+            </div>
+            <div class="slider__item-box">
+              <li class="slider__item active">
+                <h3 class="slider__item-title">Автомобильные бамперы</h3>
+                <p class="slider__item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A libero dolore
+                  reprehenderit?</p>
+              </li>
+              <li class="slider__item">
+                <h3 class="slider__item-title">Детали холодильников</h3>
+                <p class="slider__item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A libero dolore
+                  reprehenderit?</p>
+              </li>
+              <li class="slider__item">
+                <h3 class="slider__item-title">Пресс-форма — ледоходы</h3>
+                <p class="slider__item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A libero dolore
+                  reprehenderit?</p>
+              </li>
+            </div>
           </ul>
         </div>
       </div>
@@ -237,32 +253,32 @@
         <ul class="benefits__list">
           <li class="benefits__item">
             <h3 class="benefits__item-title">Высокая квалификация сотрудников</h3>
-            <p class="benefits__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi
+            <p class="benefits__item-text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi
               dolorem optio deleniti eaque dignissimos?</p>
           </li>
           <li class="benefits__item">
             <h3 class="benefits__item-title">Современное оборудование</h3>
-            <p class="benefits__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi
+            <p class="benefits__item-text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi
               dolorem optio deleniti eaque dignissimos?</p>
           </li>
           <li class="benefits__item">
             <h3 class="benefits__item-title">Индивидуальный подход</h3>
-            <p class="benefits__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi
+            <p class="benefits__item-text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi
               dolorem optio deleniti eaque dignissimos?</p>
           </li>
           <li class="benefits__item">
             <h3 class="benefits__item-title">Качественное литье</h3>
-            <p class="benefits__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi
+            <p class="benefits__item-text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi
               dolorem optio deleniti eaque dignissimos?</p>
           </li>
           <li class="benefits__item">
             <h3 class="benefits__item-title">Современное оборудование</h3>
-            <p class="benefits__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi
+            <p class="benefits__item-text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi
               dolorem optio deleniti eaque dignissimos?</p>
           </li>
           <li class="benefits__item">
             <h3 class="benefits__item-title">Индивидуальный подход</h3>
-            <p class="benefits__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi
+            <p class="benefits__item-text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore commodi
               dolorem optio deleniti eaque dignissimos?</p>
           </li>
         </ul>
@@ -348,15 +364,17 @@
         </ul>
 
         <form class="form faq__form" action="#">
-          <h3 class="subtitle hero__form-title">
+          <h3 class="subtitle faq__form-title">
             Оставьте заявку на расчёт стоимости и мы свяжемся с вами в течение рабочего дня
           </h3>
-          <input class="form__name" type="text" placeholder="Ваше имя">
-          <input class="form__phone" type="tel" name="tel" placeholder="(999)-999-99-99" required>
-          <input class="form__email email" type="email" placeholder="Ваш email (необязательно)">
-          <input class="form__company" type="text" placeholder="Компания">
-          <button class="btn form__btn">Получить консультацию</button>
-          <span class="form__label">*Нажимая на кнопку, вы соглашаетесь на обработку персональных данных</span>
+          <div class="form__inputs">
+            <input class="form__name" type="text" placeholder="Ваше имя">
+            <input class="form__phone" type="tel" name="tel" placeholder="(999)-999-99-99" required>
+            <input class="form__email email" type="email" placeholder="Ваш email (необязательно)">
+            <input class="form__company" type="text" placeholder="Компания">
+          </div>
+          <button class="btn faq__form-btn">Получить консультацию</button>
+          <p class="form__label">*Нажимая на кнопку, вы соглашаетесь на обработку персональных данных</p>
         </form>
       </div>
     </section>
