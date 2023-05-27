@@ -42,7 +42,6 @@ section {
 
 .header {
   &__top {
-    max-width: 1410px;
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -56,12 +55,10 @@ section {
     transition: all 0.8s;
   }
   &__top.header__top--bg {
-    background-color: #444;
+    background-color: #102437;
   }
   &__top.header__top--bg .header__top-inner {
-    padding: 10px 15px;
     .header__logo {
-      width: 45px;
       height: auto;
     }
   }
@@ -209,6 +206,7 @@ section {
 }
 
 .materials {
+  position: relative;
   background-color: #f9f9f9;
   padding-bottom: 125px;
   &__title {
@@ -224,9 +222,39 @@ section {
       border-radius: 20px;
       border: 1px solid #102437;
     }
-    // li:not(:last-child){
-    //   margin-right: 30px;
-    // }
+  }
+  &__item:hover {
+    background-color: #009dfc;
+    color: #fff;
+  }
+  // &__item.active{
+  //   background-color: #009DFC;
+  //   color: #fff;
+  // }
+  &__desc {
+    position: absolute;
+    bottom: -21%;
+    left: 13%;
+    padding: 30px 50px;
+    background-color: #fff;
+    border: 1px solid #00000075;
+    border-radius: 15px;
+    max-width: 1410px;
+    opacity: 0;
+    &.active {
+      opacity: 1;
+      color: #000;
+    }
+  }
+
+  &__desc-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  &__desc-text {
+    font-size: 18px;
+    font-weight: 400;
   }
 }
 
@@ -289,7 +317,15 @@ section {
     }
   }
   &__others--first {
+    position: relative;
     margin-bottom: 25px;
+    left: -5%;
+    animation: go-left-right 12s linear infinite alternate;
+  }
+  &__others--last{
+    position: relative;
+    left: 5%;
+    animation: go-right-left 9s linear infinite alternate;
   }
 }
 
@@ -322,39 +358,60 @@ section {
 }
 
 .faq {
+  padding: 25px 0 200px;
   &__title {
     text-align: center;
   }
   &__list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 25px;
+    margin-bottom: 40px;
   }
   &__item {
-    margin-bottom: 30px;
-    max-width: 48%;
     position: relative;
-    &::after {
-      content: url("../images/icons/ic.png");
-      width: 16px;
-      height: 16px;
-      right: 2%;
-      top: 5%;
-      position: absolute;
-    }
-    &:hover {
-      cursor: pointer;
-    }
   }
   &__item-title {
     font-weight: 700;
     font-size: 24px;
+    &::after {
+      content: url("../images/icons/cross.png");
+      width: 32px;
+      height: 32px;
+      right: 2%;
+      top: 5%;
+      position: absolute;
+      pointer-events: none;
+      transition: 0.4s;
+      transform: rotate(-45deg);
+    }
+    &.active{
+      &::after{
+        transform: rotate(-90deg);
+        transition: 0.4s;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      &::after {
+        background-color: rgba(1, 151, 221, 0.5);
+        border-radius: 50%;
+      }
+    }
+  }
+  &__item-desc {
+    display: none;
+    width: 90%;
   }
   &__form {
+    position: absolute;
     padding: 30px 60px;
     background-color: #009dfc;
     color: #fff;
     border-radius: 20px;
+    text-align: center;
+    width: 60%;
+    left: 21%;
   }
   &__form-title {
     max-width: 1100px;
@@ -369,14 +426,14 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  input{
-    max-width: 550px;
+  input {
+    max-width: 475px;
     width: 100%;
     margin-bottom: 30px;
   }
 }
 
-.faq__form-btn{
+.faq__form-btn {
   display: block;
   font-size: 20px;
   font-weight: 700;
@@ -386,14 +443,77 @@ section {
   margin: 0 auto 25px;
 }
 
-.farm__label{
-text-align: center;
-margin: 0 auto;
+.farm__label {
+  text-align: center;
+  margin: 0 auto;
 }
 
-.footer{
+.footer {
+  padding: 125px 0 25px;
   background-color: #102437;
   color: #fff;
+  &__wrapper {
+    padding: 125px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .socials {
+    display: flex;
+    li:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+  &__mail,
+  &__phone,
+  &__address {
+    p {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+  }
+  &__mail {
+    p {
+      margin-bottom: 10px;
+    }
+    a {
+      display: inline-block;
+      position: relative;
+      border: 1px solid #fff;
+      padding: 10px 15px 10px 50px;
+      border-radius: 10px;
+    }
+    a:before {
+      content: url("../images/icons/mail.png");
+      width: 20px;
+      height: 25px;
+      position: absolute;
+      left: 5%;
+      top: 20%;
+    }
+  }
+}
+
+@keyframes go-left-right {  
+  from {
+    left: -7%;
+  }
+  to {
+    left: calc(25% - 50px); 
+  }
+}
+
+@keyframes go-right-left {  
+  from {
+    right: -7%;
+  }
+  to {
+    left: calc(-10% - 50px); 
+  }
 }
 
 @import "media";
