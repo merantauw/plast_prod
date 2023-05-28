@@ -43,6 +43,7 @@
               </a>
             </li>
           </ul>
+          <span><a class="header__phone" href="tel:71234567890">+7(123)456-78-90</a></span>
           <button class="btn header__btn" type="button">Заказать звонок</button>
           <div class="header__burger">
             <span></span>
@@ -152,49 +153,56 @@
       </div>
     </section>
 
-    <section class="materials">
+    <section class="materials" id="materials">
       <div class="container">
         <div class="materials__wrapper">
           <h2 class="materials__title title">Материалы, с которыми мы работаем</h2>
           <div class="materials__content">
             <ul class="materials__list">
-              <li class="materials__item">ПНД
+              <li class="materials__item">
+                <span class="materials__span">ПНД</span>
                 <div class="materials__desc">
                   <p class="materials__desc-title">Полиэтилен низкого давления</p>
                   <p class="materials__desc-text">Применяется для изготовления: крышек к пластиковым бутылкам, фитингам, кухонным атрибутам, ёмкости для автохимии, фурнитуры для мебели, тарных ящиков</p>
                 </div>
               </li>
-              <li class="materials__item">АБС
+              <li class="materials__item">
+                <span class="materials__span">АБС</span>
                 <div class="materials__desc">
                   <p class="materials__desc-title">Полипропилен</p>
                   <p class="materials__desc-text">Материал для производства плёнок (особенно упаковочных), мешков, тары, труб, деталей технической аппаратуры, пластиковых стаканчиков, предметов домашнего обихода и т. д.</p>
                 </div>
               </li>
-              <li class="materials__item">ПК
+              <li class="materials__item">
+                <span class="materials__span">ПК</span>
                 <div class="materials__desc">
                   <p class="materials__desc-title">Полипропилен</p>
                   <p class="materials__desc-text">Материал для производства плёнок (особенно упаковочных), мешков, тары, труб, деталей технической аппаратуры, пластиковых стаканчиков, предметов домашнего обихода и т. д.</p>
                 </div>
               </li>
-              <li class="materials__item">ПС
+              <li class="materials__item">
+                <span class="materials__span">ПС</span>
                 <div class="materials__desc">
                   <p class="materials__desc-title">Полипропилен</p>
                   <p class="materials__desc-text">Материал для производства плёнок (особенно упаковочных), мешков, тары, труб, деталей технической аппаратуры, пластиковых стаканчиков, предметов домашнего обихода и т. д.</p>
                 </div>
               </li>
-              <li class="materials__item">ПП
+              <li class="materials__item">
+                <span class="materials__span">ПП</span>
                 <div class="materials__desc">
                   <p class="materials__desc-title">Полипропилен</p>
                   <p class="materials__desc-text">Материал для производства плёнок (особенно упаковочных), мешков, тары, труб, деталей технической аппаратуры, пластиковых стаканчиков, предметов домашнего обихода и т. д.</p>
                 </div>
               </li>
-              <li class="materials__item">ПА
+              <li class="materials__item">
+                <span class="materials__span">ПА</span>
                 <div class="materials__desc">
                   <p class="materials__desc-title">Полипропилен</p>
                   <p class="materials__desc-text">Материал для производства плёнок (особенно упаковочных), мешков, тары, труб, деталей технической аппаратуры, пластиковых стаканчиков, предметов домашнего обихода и т. д.</p>
                 </div>
               </li>
-              <li class="materials__item">ПЭ
+              <li class="materials__item">
+                <span class="materials__span">ПЭ</span>
                 <div class="materials__desc">
                   <p class="materials__desc-title">Полиэтилен</p>
                   <p class="materials__desc-text">Используется для изготовления направительных лент, дорожек цепных устройств, различных деталей скольжения, винтов, звездочек, шкивов, смахивающих устройств</p>
@@ -215,17 +223,17 @@
               <img src="images/bamper-3.jpg" alt="Фото изделия">
             </div>
             <div class="slider__item-box">
-              <li class="slider__item active">
+              <li class="slider__item active" data-src="images/bamper-3.jpg">
                 <h3 class="slider__item-title">Автомобильные бамперы</h3>
                 <p class="slider__item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A libero dolore
                   reprehenderit?</p>
               </li>
-              <li class="slider__item">
+              <li class="slider__item" data-src="images/kholod.jpg">
                 <h3 class="slider__item-title">Детали холодильников</h3>
                 <p class="slider__item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A libero dolore
                   reprehenderit?</p>
               </li>
-              <li class="slider__item">
+              <li class="slider__item" data-src="https://plasticmachinery.ru/wp-content/uploads/2023/02/WeChat-Image_20220914100231.webp">
                 <h3 class="slider__item-title">Пресс-форма — ледоходы</h3>
                 <p class="slider__item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A libero dolore
                   reprehenderit?</p>
@@ -282,7 +290,7 @@
       </ul>
     </section>
 
-    <section class="benefits">
+    <section class="benefits" id="benefits">
       <div class="container">
         <h2 class="benefits__title title">Наши преимущества</h2>
         <ul class="benefits__list">
@@ -404,7 +412,7 @@
           </h3>
           <div class="form__inputs">
             <input class="form__name" type="text" placeholder="Ваше имя">
-            <input class="form__phone" type="tel" name="tel" placeholder="(999)-999-99-99" required>
+            <input class="form__phone" type="tel" name="tel" placeholder="7(999)-999-99-99" required>
             <input class="form__email email" type="email" placeholder="Ваш email (необязательно)">
             <input class="form__company" type="text" placeholder="Компания">
           </div>
