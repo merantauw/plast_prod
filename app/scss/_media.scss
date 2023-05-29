@@ -103,8 +103,7 @@
 }
 
 @media (max-width: 999px) {
-
-  body.lock{
+  body.lock {
     height: 100vh;
     overflow: hidden;
   }
@@ -180,44 +179,386 @@
   }
 }
 
-@media (max-width: 961px){
-  
-  .text{
+@media (max-width: 961px) {
+  .text {
     font-size: 16px;
   }
 
-  .hero{
-    &__title{
+  .hero {
+    &__title {
       font-size: 36px;
     }
-    &__form{
+    &__form {
       max-width: 300px;
     }
   }
 
-  .about{
-    &__content{
+  .about {
+    &__content {
       flex-direction: column-reverse;
       align-items: center;
     }
-    &__text{
+    &__text {
       max-width: 100%;
     }
   }
 
-  .materials__list{
+  .materials__list {
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
     grid-gap: 25px;
   }
 
-  .faq__item-title{
-    &::after{
+  .faq__item-title {
+    &::after {
       right: 4%;
     }
   }
 
-  .faq__form-title{
+  .faq__form-title {
     font-size: 26px;
+  }
+
+  .footer__wrapper {
+    padding: 90px 0 50px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  body.lock {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .faq {
+    &__item-title {
+      width: 85%;
+    }
+  }
+  .materials {
+    &__list {
+      grid-gap: 15px;
+      li {
+        font-size: 26px;
+        text-align: center;
+        padding: 10px 15px;
+      }
+    }
+  }
+
+  .portfolio {
+    padding-top: 100px;
+    .slider__box {
+      flex-direction: column;
+      .slider__img-box {
+        margin: 0 0 15px;
+      }
+    }
+    &__slider {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: 541px) {
+  section {
+    padding: 10px 0;
+  }
+
+  .title {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  .about__title,
+  .howto__title,
+  .portfolio__title,
+  .benefits__title {
+    text-align: center;
+  }
+
+  .header {
+    &__phone {
+      display: none;
+    }
+    .menu__item-phone {
+      display: block;
+      text-align: center;
+      a {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .hero {
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      &--left {
+        margin-bottom: 15px;
+      }
+    }
+    &__title {
+      font-size: 40px;
+    }
+  }
+
+  .about {
+    &__img-box {
+      margin: 0;
+    }
+  }
+
+  .materials {
+    &__desc {
+      bottom: -25%;
+      padding: 30px;
+    }
+  }
+
+  .benefits {
+    &__item {
+      padding-left: 50px;
+    }
+    &__item-title {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 429px) {
+  .howto {
+    &__group {
+      flex-direction: column;
+      &-item {
+        max-width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  .materials {
+    &__desc {
+      padding: 20px;
+      bottom: -20%;
+    }
+    &__list{
+      li{
+        padding: 10px;
+      }
+    }
+  }
+
+  .benefits__item {
+    max-width: 100%;
+  }
+
+  .faq {
+    &__list {
+      grid-template-columns: 100%;
+      grid-gap: 15px;
+    }
+    &__form {
+      width: 100%;
+      left: 0%;
+      padding: 10px 15px;
+      .form__inputs{
+        input{
+          width: 100%;
+        }
+        .form__email,
+        .form__company{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .footer{
+    &__wrapper{
+      padding: 90px 0 0;
+      display: block;
+    }
+    &__logo,
+    &__phone p,
+    &__address p{
+      margin-bottom: 10px;
+    }
+    &__socials,
+    &__mail,
+    &__phone{
+      margin-bottom: 25px;
+    }
+  }  
+}
+
+@media (max-width: 340px){
+  .text{
+    font-size: 14px;
+  }
+  .title{
+    font-size: 26px;
+  }
+  .header__btn{
+    display: none;
+  }
+  .hero{
+    justify-content: end;
+    &__title{
+      font-size: 24px;
+    }
+    &__form{
+      input{
+        margin-bottom: 15px;
+      }
+      .form__email{
+        display: none;
+      }
+      &-title{
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .howto{
+    &__item-title{
+      font-size: 22px;
+    }
+    &__list-item{
+      font-size: 14px;
+    }
+  }
+
+  .materials{
+    &__list{
+      li{
+        font-size: 18px;
+      }
+    }
+    &__desc{
+      padding: 10px;
+      &-title{
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      &-text{
+        font-size: 14px;
+      }
+    }
+  }
+
+  .faq{
+    &__form-title{
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-height: 825px) and (orientation: landscape){
+  .materials{
+    &__desc{
+      left: 0;
+    }
+  }
+
+  .portfolio .slider__img-box{
+    margin-right: 20px;
+  }
+
+}
+
+@media (max-height: 720px) and (orientation: landscape){
+  .portfolio__slider{
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-height: 468px) and (orientation: landscape){
+  .title{
+    font-size: 32px;
+    margin-bottom: 15;
+  }
+
+  
+  .hero{
+    justify-content: end;
+    &__title{
+      font-size: 30px;
+      width:95%;
+    }
+    &__form{
+      .form__email{
+        display: none;
+      }
+    }
+  }
+
+  .howto{
+    &__item{
+      &-title{
+        font-size: 20px;
+      }
+    }
+    &__list{
+      &-item{
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-height: 340px) and (orientation: landscape){
+  .text{font-size: 14px;}
+  .btn{
+    padding: 5px 15px;
+  }
+  .hero{
+    &__form{
+      max-width: 400px;
+      &-title{
+        margin-bottom: 10px;
+      }
+      input{
+        margin-bottom: 10px;
+      }
+    }
+    &__title{
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+    &__text{
+      display: none;
+    }
+  }
+
+  .howto{
+    &__group{
+      display: block;
+      &-item{
+        margin-bottom: 10px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .faq{
+    &__list{
+      grid-template-columns: 100%;
+    }
+    &__form{
+      width: 100%;
+      left: 0;
+      &-title{
+        font-size: 22px;
+      }
+    }
+  }
+
+  .footer__wrapper{
+    grid-gap: 5px;
   }
 }

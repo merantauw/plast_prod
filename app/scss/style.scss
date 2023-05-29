@@ -104,6 +104,9 @@ section {
       color: #2596ff;
       border-bottom: 1px solid #2596ff;
     }
+    &-phone{
+      display: none;
+    }
   }
   .menu__item.active a {
     padding-bottom: 2px;
